@@ -6,10 +6,12 @@
 Description=Journal Remote Sink Socket
 
 [Socket]
-ListenStream={{ vpn_ip }}:19532
+ListenStream={{ log_server }}:{{ journald_port }}
 FreeBind=true
 BindIPv6Only=both
-BindToDevice={{ tinc_prefix }}{{ tinc_name }}
+{% if journald_iface in ansible_interfaces %}
+BindToDevice={{ journald_iface }}
+{% endif %}
 
 [Install]
 WantedBy=sockets.target

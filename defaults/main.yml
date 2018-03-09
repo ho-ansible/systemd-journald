@@ -1,2 +1,4 @@
 ---
 log_server: 192.168.0.1
+journald_port: 19532
+journald_iface: vpn
