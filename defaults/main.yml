@@ -1,4 +1,4 @@
 ---
 log_server: 192.168.0.1
 journald_port: 19532
-journald_iface: vpn
+journald_iface: "{{ ansible_default_ipv4.interface }}"
