@@ -2,3 +2,4 @@
 journald_server: 192.168.0.1
 journald_port: 19532
 journald_iface: "{{ ansible_default_ipv4.interface }}"
+journald_server_group: log
