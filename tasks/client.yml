@@ -12,12 +12,13 @@
     - restart journald
     - restart journal-upload
 
-- name: journald | client | service file
+- name: journald | client | systemd service
   tags:
     - service
-  copy:
-    src: systemd-journal-upload.service
-    dest: /etc/systemd/system/
+  template:
+    src: "{{ item }}".j2
+    dest: /etc/systemd/system/{{ item }}
+  with_items: systemd-journal-upload.service
   notify: 
     - restart journal-upload
 
