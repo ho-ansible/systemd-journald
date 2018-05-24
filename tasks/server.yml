@@ -34,6 +34,6 @@
   service:
     name: "{{ item }}"
     enabled: yes
-  with_items:
+  loop:
     - systemd-journal-remote.service
     - systemd-journal-remote.socket
