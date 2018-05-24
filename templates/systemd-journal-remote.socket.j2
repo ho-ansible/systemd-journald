@@ -9,9 +9,7 @@ Description=Journal Remote Sink Socket
 ListenStream={{ journald_server }}:{{ journald_port }}
 FreeBind=true
 BindIPv6Only=both
-{% if journald_iface in ansible_interfaces %}
 BindToDevice={{ journald_iface }}
-{% endif %}
 
 [Install]
 WantedBy=sockets.target
