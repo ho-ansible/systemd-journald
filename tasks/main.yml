@@ -2,6 +2,6 @@
 
 - import_tasks: common.yml
 - include_tasks: client.yml
-  when: "journald_server_group not in group_names"
+  when: journald_server_group not in group_names
 - include_tasks: server.yml
-  when: "journald_server_group in group_names"
+  when: journald_server_group in group_names
