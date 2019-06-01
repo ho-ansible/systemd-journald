@@ -5,7 +5,7 @@ Logging
 Only tested on Debian stable, for now.
 
 ## Role Variables
-+ `journald_server`: where to upload journals to
++ `journald_server` (default: localhost): where to upload journals to
 + `journald_port` (default: 19532): listener port for receiver (journald-remote)
 + `journald_iface` (default: primary network interface): bind listener to this interface
 + `journald_server_group` (default: log): inventory group on which to run journald-remote. All others that apply this role get journald-upload.
