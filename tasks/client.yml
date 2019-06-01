@@ -10,6 +10,18 @@
     - restart journald
     - restart journal-upload
 
+- name: journald | client | user
+  tags:
+    - user
+  user:
+    name: "{{ journald_user }}"
+    groups: "{{ journald_user }}"
+    home: /run/systemd
+    system: yes
+    password: "!"
+    shell: /bin/false
+    create_home: no
+
 - name: journald | client | systemd service
   tags:
     - service

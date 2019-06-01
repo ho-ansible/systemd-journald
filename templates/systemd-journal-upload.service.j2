@@ -9,7 +9,7 @@ After=network-online.target
 
 [Service]
 ExecStart=/lib/systemd/systemd-journal-upload --save-state
-User=systemd-journal-upload
+User={{ journald_user }}
 SupplementaryGroups=systemd-journal
 WatchdogSec=3min
 Restart=on-failure
