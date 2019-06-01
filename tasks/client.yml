@@ -10,6 +10,13 @@
     - restart journald
     - restart journal-upload
 
+- name: journald | client | group
+  tags:
+    - group
+  group:
+    name: "{{ journald_user }}"
+    system: yes
+
 - name: journald | client | user
   tags:
     - user
