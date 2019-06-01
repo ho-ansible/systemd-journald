@@ -29,6 +29,15 @@
     shell: /bin/false
     create_home: no
 
+- name: journald | client | dir
+  tags:
+    - group
+  file:
+    dest: /var/lib/systemd/journal-upload
+    state: directory
+    owner: "{{ journald_user }}"
+    group: "{{ journald_user }}"
+
 - name: journald | client | systemd service
   tags:
     - service
