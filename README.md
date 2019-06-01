@@ -25,4 +25,4 @@ None.
 MIT
 
 ## Author Information
-Sean Ho, https://github.com/ho-ansible/
+Ansible role by [Sean Ho](https://github.com/ho-ansible/)
