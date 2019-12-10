@@ -17,4 +17,5 @@ galaxy_info:
     - journal
     - log
 
-dependencies: []
+dependencies:
+  - role: systemd

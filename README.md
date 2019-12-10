@@ -11,15 +11,7 @@ Only tested on Debian stable, for now.
 + `journald_server_group` (default: log): inventory group on which to run journald-remote. All others that apply this role get journald-upload.
 
 ## Dependencies
-None.
-
-## Example Playbook
-
-```
-- hosts: linux
-  roles:
-    - { role: ho-ansible.systemd-journald }
-```
++ [ho-ansible.systemd](https://github.com/ho-ansible/systemd)
 
 ## License
 MIT

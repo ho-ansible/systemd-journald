@@ -8,6 +8,7 @@
     src: systemd-journal-remote.socket.j2
     dest: /etc/systemd/system/systemd-journal-remote.socket
   notify:
+    - daemon-reload
     - restart journald
     - restart journal-remote
 
@@ -18,6 +19,7 @@
     src: systemd-journal-remote.service
     dest: /etc/systemd/system/
   notify: 
+    - daemon-reload
     - restart journal-remote
 
 - name: journald | server | storage dir
